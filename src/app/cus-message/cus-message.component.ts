@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material';
+import { MAT_DIALOG_DATA, MatIconRegistry } from '@angular/material';
 import { CusMessageConfig } from './cus-message-config';
 
 @Component({
