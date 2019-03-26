@@ -10,12 +10,14 @@
 }
 
 ::ng-deep .mat-dialog-content {
+  font-weight: 500;
   margin: 0 -12px;
   padding: 0 12px;
 }
 
 ::ng-deep .mat-dialog-actions {
   margin-bottom: -12px;
+  padding: 0;
 }
 
 .cus-title hr {
@@ -26,5 +28,5 @@
   height: 2px;
   border-radius: 4px;
   margin-top: 2px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }

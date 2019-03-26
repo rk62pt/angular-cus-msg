@@ -8,6 +8,13 @@ export class CusMessageService {
 
   constructor(private dialog: MatDialog) { }
 
+  showSysMsg(msg: string, width: number, hideClose: boolean): MatDialogRef<CusMessageComponent, string> {
+    return this.dialog.open(CusMessageComponent, {
+      width: width+'%',
+      data: {"title": "系統訊息", "msg": msg,"hideClose":hideClose}
+    });
+  }
+
   showDefMsg(title: string, msg: string): MatDialogRef<CusMessageComponent, string> {
     return this.dialog.open(CusMessageComponent, {
       width: '30%',
