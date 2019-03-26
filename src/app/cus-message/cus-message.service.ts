@@ -8,10 +8,16 @@ export class CusMessageService {
 
   constructor(private dialog: MatDialog) { }
 
-  showMsg(title: string, msg: string): MatDialogRef<CusMessageComponent, string> {
-    let _dialogConfig: MatDialogConfig<CusMessageConfig>;
+  showDefMsg(title: string, msg: string): MatDialogRef<CusMessageComponent, string> {
     return this.dialog.open(CusMessageComponent, {
-      width: '45%',
+      width: '30%',
+      data: {"title": title, "msg": msg}
+    });
+  }
+
+  showMsg(title: string, msg: string, width: number): MatDialogRef<CusMessageComponent, string> {
+    return this.dialog.open(CusMessageComponent, {
+      width: width+'%',
       data: {"title": title, "msg": msg}
     });
   }

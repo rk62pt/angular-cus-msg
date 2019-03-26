@@ -14,6 +14,10 @@ export class AppComponent  {
     private cusMessage: CusMessageService){}
 
   show() {
-    this.cusMessage.showMsg("系統訊息", "測試測試測試");
+    this.cusMessage.showDefMsg("系統訊息", "測試測試測試");
+  }
+
+  show60() {
+    this.cusMessage.showMsg("系統訊息", "測試測試測試",60);
   }
 }

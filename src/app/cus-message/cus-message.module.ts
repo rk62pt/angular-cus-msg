@@ -7,22 +7,19 @@ import {
 } from '@angular/material';
 import { CusMessageService } from './cus-message.service';
 import { CusMessageComponent } from './cus-message.component';
-import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   imports: [
     BrowserModule,
     CommonModule,
     MatButtonModule,
-    MatDialogModule,
-    MatIconModule
+    MatDialogModule
   ],
   providers: [ 
     CusMessageService
   ],
   exports: [
-    CusMessageComponent,
-    MatIconModule,
+    CusMessageComponent
   ],
   entryComponents: [
     CusMessageComponent
