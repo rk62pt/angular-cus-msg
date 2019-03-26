@@ -21,4 +21,24 @@ export class CusMessageService {
       data: {"title": title, "msg": msg}
     });
   }
+
+  showDefTempMsg(title: string, msg: string, time: number): void {
+    const matDialogRef = this.dialog.open(CusMessageComponent, {
+      width: '30%',
+      data: {"title": title, "msg": msg}
+    });
+    setInterval(function(){
+      matDialogRef.close();
+    },time*1000);
+  }
+
+  showTempMsg(title: string, msg: string, width: number, time: number): void {
+    const matDialogRef = this.dialog.open(CusMessageComponent, {
+      width: width+'%',
+      data: {"title": title, "msg": msg}
+    });
+    setInterval(function(){
+      matDialogRef.close();
+    },time*1000);
+  }
 }

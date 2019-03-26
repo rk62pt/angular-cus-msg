@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatIconRegistry } from '@angular/material';
+import { MatDialogRef, MAT_DIALOG_DATA, MatIconRegistry } from '@angular/material';
 import { CusMessageConfig } from './cus-message-config';
 
 @Component({
@@ -8,7 +8,8 @@ import { CusMessageConfig } from './cus-message-config';
   styleUrls: ['./cus-message.component.css']
 })
 export class CusMessageComponent{
-
   constructor(@Inject(MAT_DIALOG_DATA)public config: CusMessageConfig) { }
+
+
 
 }

@@ -20,4 +20,12 @@ export class AppComponent  {
   show60() {
     this.cusMessage.showMsg("系統訊息", "測試測試測試",60);
   }
+
+  show3sec() {
+    this.cusMessage.showDefTempMsg("系統訊息", "測試測試測試",3);
+  }
+
+  show603sec() {
+    this.cusMessage.showTempMsg("系統訊息", "測試測試測試",60,3);
+  }
 }
