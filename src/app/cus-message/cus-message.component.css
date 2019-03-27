@@ -2,26 +2,31 @@
 .cus-title {
   font-weight: 700;
   margin: 0 0 0px;
+  font-size: 1rem;
+  /* border-radius: 10px;
+  background-image: linear-gradient(to bottom right, red, rgba(0,0,0,0.3)); */
 }
 
 ::ng-deep .mat-dialog-container {
-  padding: 12px;
+  padding: 6px;
   width: 100%;
 }
 
 ::ng-deep .mat-dialog-content {
   font-weight: 500;
-  margin: 0 -12px;
-  padding: 0 12px;
+  margin: 0 -6px;
+  padding: 0 6px 6px;
+  font-size: 1rem;
 }
 
 ::ng-deep .mat-dialog-actions {
-  margin-bottom: -12px;
+  margin-bottom: -6px;
   padding: 0;
 }
 
 .cus-title hr {
-  background-image: linear-gradient(to right,#ff8a00,#da1b60);
+  background-image: linear-gradient(to bottom right, red, rgba(0,0,0,0));
+  /* background-image: linear-gradient(to right,#ff8a00,#da1b60); */
   border: 0;
   display: block;
   width: 100%;
@@ -29,4 +34,17 @@
   border-radius: 4px;
   margin-top: 2px;
   margin-bottom: 12px;
+}
+
+@keyframes slideDown{
+    0%{ }
+    100%{transform: translateY(10%);}
+}
+
+::ng-deep .cdk-overlay-pane{
+    transform: translateY(-10%);
+    animation: slideDown 0.3s forwards 0s ease-in;
+}
+::ng-deep .cdk-overlay-container > * {
+    transition: none;
 }

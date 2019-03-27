@@ -32,4 +32,7 @@ export class AppComponent  {
   showSysMsg() {
     this.cusMessage.showSysMsg("登入成功!",20,true);
   }
+  showLockSysMsg() {
+    this.cusMessage.showLockSysMsg("登入成功!",20,true);
+  }
 }
