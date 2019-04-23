@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material';
 import { CusMessageConfig } from './cus-message-config';
 import { CusMessageComponent } from './cus-message.component';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class CusMessageService {
@@ -10,7 +11,7 @@ export class CusMessageService {
 
   showSysMsg(msg: string, width: number, hideClose: boolean): MatDialogRef<CusMessageComponent, string> {
     return this.dialog.open(CusMessageComponent, {
-      width: width+'%',
+      width: `${width}%`,
       minWidth: '8rem', 
       position:{"top":"10%"},
       data: {"title": "系統訊息", "msg": msg, "hideClose":hideClose}
@@ -19,7 +20,7 @@ export class CusMessageService {
 
   showLockSysMsg(msg: string, width: number, hideClose: boolean): MatDialogRef<CusMessageComponent, string> {
     return this.dialog.open(CusMessageComponent, {
-      width: width+'%',
+      width: `${width}%`,
       position:{"top":"10%"},
       disableClose: true,
       data: {"title": "系統訊息", "msg": msg, "hideClose":hideClose}
@@ -65,5 +66,14 @@ export class CusMessageService {
     setInterval(function(){
       matDialogRef.close();
     },time*1000);
+  }
+
+  showConfirmMsg(title: string, msg: string, width: number): Observable<any> {
+    return this.dialog.open(CusMessageComponent, {
+      width: width+'%',
+      minWidth: '8rem', 
+      position:{"top":"10%"},
+      data: {"title": title, "msg": msg, "hideClose":true, "showConfirm":true}
+    }).afterClosed();
   }
 }

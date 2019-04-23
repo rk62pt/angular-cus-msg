@@ -54,4 +54,5 @@ button {
       min-width: 46px !important;
       font-size: 12px !important;
       line-height: 0px; 
+      margin: 3px;
 }

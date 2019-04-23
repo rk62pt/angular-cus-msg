@@ -8,7 +8,7 @@ import { CusMessageConfig } from './cus-message-config';
   styleUrls: ['./cus-message.component.css']
 })
 export class CusMessageComponent{
-  constructor(@Inject(MAT_DIALOG_DATA)public config: CusMessageConfig) { }
+  constructor(@Inject(MAT_DIALOG_DATA)public config: CusMessageConfig, public dialogRef: MatDialogRef<CusMessageComponent>) { }
 
 
 
