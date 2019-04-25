@@ -37,10 +37,10 @@ export class AppComponent  {
   }
 
   showConfirm() {
-    this.cusMessage.showConfirmMsg("確認訊息","是否確定刪除?",30).subscribe(result => {
+    this.cusMessage.showConfirmMsg("確認訊息","是否確定刪除?", 30).subscribe(result => {
       console.log(`刪除結果${result}`);
       if(result){
-        this.cusMessage.showDefTempMsg("系統訊息", "資料已刪除",3);
+        this.cusMessage.showDefTempMsg("系統訊息", "資料已刪除", 3);
       }
     });
   }
